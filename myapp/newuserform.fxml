@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="1043.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cass.myapp.controllers.AddUser">
+   <children>
+      <Pane layoutX="239.0" layoutY="96.0" prefHeight="465.0" prefWidth="581.0" style="-fx-background-color: rgba(245, 242, 242, 0.808); -fx-background-radius: 20; -fx-border-radius: 20; -fx-opacity: 0.3;">
+         <effect>
+            <DropShadow radius="9.0275" spread="0.03" width="17.11">
+               <color>
+                  <Color red="0.6578947305679321" green="0.6477420330047607" blue="0.6477420330047607" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Pane>
+      <TextField fx:id="usernameField" layoutX="371.0" layoutY="164.0" prefHeight="32.0" prefWidth="320.0" promptText="Username">
+         <font>
+            <Font name="Roboto" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="userIdField" layoutX="370.0" layoutY="230.0" prefHeight="32.0" prefWidth="320.0" promptText="User ID">
+         <font>
+            <Font name="Roboto" size="14.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="passwordField" layoutX="371.0" layoutY="297.0" prefHeight="32.0" prefWidth="320.0" promptText="Password">
+         <font>
+            <Font name="Roboto" size="14.0" />
+         </font>
+      </PasswordField>
+      <PasswordField fx:id="confirmPasswordField" layoutX="372.0" layoutY="361.0" prefHeight="32.0" prefWidth="320.0" promptText="Confirm Password">
+         <font>
+            <Font name="Roboto" size="14.0" />
+         </font>
+      </PasswordField>
+      <RadioButton fx:id="Male" layoutX="373.0" layoutY="436.0" mnemonicParsing="false" text="Student" textFill="#0691d9">
+         <font>
+            <Font name="Roboto" size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="userRoles" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="Female" layoutX="463.0" layoutY="436.0" mnemonicParsing="false" text="Staff" textFill="#0691d9" toggleGroup="$userRoles">
+         <font>
+            <Font name="Roboto" size="14.0" />
+         </font>
+      </RadioButton>
+      <Button fx:id="submitButton" layoutX="419.0" layoutY="481.0" mnemonicParsing="false" onAction="#SubmitForm" prefHeight="39.0" prefWidth="244.0" style="-fx-background-color: rgb(127, 55, 0);" stylesheets="@cliparts/cass.css" text="SUBMIT" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Roboto Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="372.0" layoutY="143.0" prefHeight="17.0" prefWidth="95.0" text="Username" textFill="#0691d9">
+         <font>
+            <Font name="Roboto" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="371.0" layoutY="277.0" prefHeight="17.0" prefWidth="95.0" text="Password" textFill="#0691d9">
+         <font>
+            <Font name="Roboto" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="373.0" layoutY="342.0" prefHeight="18.0" prefWidth="145.0" text="Confim Password" textFill="#0691d9">
+         <font>
+            <Font name="Roboto" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="284.0" layoutY="111.0" prefHeight="25.0" prefWidth="564.0" text="NOTE: User can only be a registered member of the designated class" textFill="#888787">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="376.0" layoutY="409.0" prefHeight="17.0" prefWidth="95.0" text="User Role" textFill="#0691d9">
+         <font>
+            <Font name="Roboto" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="372.0" layoutY="211.0" prefHeight="17.0" prefWidth="95.0" text="User ID" textFill="#0691d9">
+         <font>
+            <Font name="Roboto" size="14.0" />
+         </font>
+      </Label>
+      <Pane layoutY="-4.0" prefHeight="100.0" prefWidth="1043.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: brown;" styleClass="pane" stylesheets="@cass.css">
+         <children>
+            <Label id="staffLabel" layoutX="400.0" layoutY="18.0" prefHeight="66.0" prefWidth="381.0" styleClass="staffLabel" stylesheets="@cass.css" text="add a new USER" textFill="WHITE">
+               <font>
+                  <Font name="BebasNeueBold" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
