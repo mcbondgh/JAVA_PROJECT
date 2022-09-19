@@ -1,0 +1,102 @@
+#backButton {
+  
+    -fx-cursor:hand;
+}
+
+.backButton:hover {
+    -fx-background-color:rgb(135, 2, 2);
+}
+
+.addStudentBtn {
+    -fx-background-color:rgb(0, 174, 0);
+    -fx-fontcolor:#fff;
+    -fx-cursor:hand;
+}
+
+hoverEffect {
+    -fx-background-color:Blue;
+}
+
+#mainStage {
+
+
+}
+
+#classRepInterface {
+    -fx-background-color:rgb(230, 224, 224);;
+    }
+
+   #studentIdLabel {
+    -fx-font-family: roboto;
+    -fx-font-size: 16;
+   }
+
+   .studentLogin{
+    -fx-background-color:rgb(25, 169, 225);
+    -fx-cursor:hand;
+   }
+
+   .studentCloseButton {
+    -fx-background-color:#e07259;
+   }
+
+   .staffLogoutButton {
+    -fx-background-color:#00a619;
+    -fx-fontcolor:#fff;
+   }
+
+   .staffCloseButton {
+    -fx-background-color:red;
+    -fx-fontcolor:#fff;
+
+   }
+
+   .pane {
+        -fx-background-color: rgb(172, 0, 106);
+   }
+
+   #staffLabel {
+    -fx-color:#fff;
+   }
+
+   .submit {
+    -fx-background-color:rgb(172, 0, 106);
+    -fx-cursor:hand;
+   }
+
+   .dropdown, .dashboard-label {
+    -fx-box-shadow: 1px 2px 4px rgb(69, 4, 4);
+   }
+
+#displayTotalStu{
+    -fx-background-color:rgb(232, 236, 237);
+    -fx-background-radius: 20px;
+    -fx-border-shadow: 20px 2px 10px rgb(62, 25, 25);
+    -fx-border-right: 1px solid gray;
+}
+
+#displaySubjects{
+    -fx-background-color:rgba(0, 191, 255, 0.847);
+    -fx-background-radius: 20px;
+    -fx-border-shadow: 20px 2px 10px rgb(62, 25, 25);
+    -fx-border-right: 1px solid rgba(18, 1, 94, 0.365);
+}
+
+#displayLecturers{
+    -fx-background-color:rgb(229, 229, 229);
+    -fx-background-radius: 20px;
+    -fx-border-shadow: 20px 2px 10px rgb(62, 25, 25);
+    -fx-border-right: 1px solid gray;
+}
+
+#displayUsers{
+    -fx-background-color:rgba(0, 191, 255, 0.847);
+    -fx-background-radius: 20px;
+    -fx-border-shadow: 20px 2px 10px rgb(62, 25, 25);
+    -fx-border-right: 1px solid gray;
+}
+
+
+.paneShadow {
+    -fx-border-shadow: 20px 10px 30px rgb(97, 94, 94);
+}

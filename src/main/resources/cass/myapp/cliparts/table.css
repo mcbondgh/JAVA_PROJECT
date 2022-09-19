@@ -1,0 +1,21 @@
+.total_attendance {
+   -fx-text-fill: #fff;
+
+}
+.total_attendance label{
+    -fx-text-color: green;
+    -fx-text-fill:white;
+}
+.id, .student_class, .studentId, fullname {
+    -fx-background-color: #fff;
+    -fx-text-fill:#333;
+
+}
+
+.table_view {
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-border-width: 2px;
+   -fx-border-color: gray;
+}
+

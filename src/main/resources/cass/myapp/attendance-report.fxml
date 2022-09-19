@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="1043.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cass.myapp.controllers.AttendanceReport">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a1a1a100" height="43.0" layoutX="24.0" layoutY="94.0" stroke="#9f9c9c" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="1.0" strokeWidth="2.0" style="-fx-border-radius: 10; -fx-background-radius: 10;" width="1006.0">
+         <effect>
+            <ColorAdjust brightness="0.45" />
+         </effect></Rectangle>
+      <Pane layoutX="-2.0" layoutY="-2.0" prefHeight="87.0" prefWidth="1049.0" style="-fx-background-color: rgb(2, 151, 136); -fx-border-radius: 10; -fx-background-radius: 10;">
+         <children>
+            <Label fx:id="reflection" layoutX="14.0" layoutY="11.0" prefHeight="65.0" prefWidth="348.0" text="attendance report" textFill="WHITE">
+               <font>
+                  <Font name="BebasNeueBold" size="53.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="subject_box" layoutX="387.0" layoutY="39.0" prefHeight="35.0" prefWidth="197.0" style="-fx-font-weight: bold; -fx-font-size: 15; -fx-text-color: blue;">
+               <effect>
+                  <DropShadow height="19.05" radius="8.6425" width="17.52">
+                     <color>
+                        <Color red="0.3333333432674408" green="0.3189300298690796" blue="0.3189300298690796" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ComboBox>
+            <Separator layoutX="366.0" layoutY="7.0" orientation="VERTICAL" prefHeight="73.0" prefWidth="5.0" />
+            <DatePicker fx:id="date_from" layoutX="606.0" layoutY="39.0" prefHeight="35.0" prefWidth="129.0" style="-fx-font-weight: bold; -fx-font-size: 15; -fx-text-color: blue;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow height="19.05" radius="8.6425" width="17.52">
+                     <color>
+                        <Color red="0.3333333432674408" green="0.3189300298690796" blue="0.3189300298690796" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </DatePicker>
+            <DatePicker fx:id="date_to" layoutX="742.0" layoutY="39.0" prefHeight="35.0" prefWidth="129.0" style="-fx-font-weight: bold; -fx-font-size: 15; -fx-text-color: blue;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow height="19.05" radius="8.6425" width="17.52">
+                     <color>
+                        <Color red="0.3333333432674408" green="0.3189300298690796" blue="0.3189300298690796" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </DatePicker>
+            <Label fx:id="reflection1" layoutX="642.0" layoutY="7.0" prefHeight="0.0" prefWidth="58.0" text="From" textFill="WHITE">
+               <font>
+                  <Font name="BebasNeueBold" size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="reflection11" layoutX="787.0" layoutY="6.0" prefHeight="33.0" prefWidth="30.0" text="to" textFill="WHITE">
+               <font>
+                  <Font name="BebasNeueBold" size="27.0" />
+               </font>
+            </Label>
+            <Button fx:id="generate_attendance" layoutX="895.0" layoutY="39.0" mnemonicParsing="false" onAction="#generateAttendance" prefHeight="35.0" prefWidth="104.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: RED;" text="Generate" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow height="0.0" radius="4.75">
+                     <color>
+                        <Color red="0.3070175349712372" green="0.3041747808456421" blue="0.3041747808456421" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Label fx:id="reflection12" layoutX="443.0" layoutY="6.0" prefHeight="33.0" prefWidth="79.0" text="subject" textFill="WHITE">
+               <font>
+                  <Font name="BebasNeueBold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="48.0" layoutY="104.0" prefHeight="22.0" prefWidth="67.0" text="Between">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="month_label" layoutX="113.0" layoutY="104.0" prefHeight="22.0" prefWidth="104.0" text="-" textFill="#029788">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table_view" layoutX="37.0" layoutY="149.0" prefHeight="395.0" prefWidth="1006.0" scaleShape="false" style="-fx-text-alignment: center; -fx-font-size: 16; -fx-background-color: white; -fx-border-color: gray; -fx-alignment: center;" styleClass="table_view" stylesheets="@cliparts/table.css" tableMenuButtonVisible="true">
+        <columns>
+          <TableColumn fx:id="studentIdColumn" maxWidth="252.00001525878906" prefWidth="189.33334732055664" resizable="false" style="-fx-alignment: center;" text="STUDENT ID" />
+            <TableColumn fx:id="fullnameColumn" maxWidth="313.33335876464844" prefWidth="288.6667022705078" resizable="false" style="-fx-alignment: center;" text="FULLNAME" />
+            <TableColumn fx:id="classColumn" maxWidth="244.00006103515625" prefWidth="91.33331298828125" resizable="false" style="-fx-alignment: center;" text="CLASS" />
+            <TableColumn id="total_attendance" fx:id="attendanceColumn" maxWidth="308.0000305175781" prefWidth="145.33331298828125" resizable="false" style="-fx-background-color: rgba(255, 16, 112, 0.676); -fx-text-fill: #fff; -fx-alignment: center; -fx-font-weight: bold;" styleClass="total_attendance" text="TOTAL ATTEN" />
+            <TableColumn fx:id="absentColumn" maxWidth="344.0" prefWidth="122.66668701171875" resizable="false" style="-fx-background-color: #FFCDCB; -fx-text-fill: #E6000C; -fx-alignment: center; -fx-font-weight: bold;" text="TOTAL ABSENT" />
+            <TableColumn fx:id="presentColumn" maxWidth="274.0" prefWidth="148.0" resizable="false" style="-fx-background-color: #2DFB04#2DFB04; -fx-text-weight: bold; -fx-text-fill: #fff; -fx-alignment: center; -fx-font-weight: bold;" text="TOTAL PRESENT" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label layoutX="437.0" layoutY="104.0" prefHeight="22.0" prefWidth="79.0" text="Subject:">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="subject_label" layoutX="495.0" layoutY="104.0" prefHeight="22.0" prefWidth="222.0" text="-" textFill="#029788">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="month_label2" layoutX="246.0" layoutY="105.0" prefHeight="22.0" prefWidth="121.0" text="-" textFill="#029788">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="reflection111" layoutX="222.0" layoutY="99.0" prefHeight="33.0" prefWidth="30.0" text="To" textFill="RED">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="729.0" layoutY="104.0" prefHeight="22.0" prefWidth="45.0" text="Tutor:">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="486.0" layoutY="545.0" text="copyright (c) cass 2022" />
+      <Label fx:id="tutor_label" layoutX="776.0" layoutY="104.0" prefHeight="22.0" prefWidth="222.0" text="-" textFill="#029788">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="year_label" layoutX="355.0" layoutY="99.0" prefHeight="33.0" prefWidth="58.0" text="-" textFill="RED">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

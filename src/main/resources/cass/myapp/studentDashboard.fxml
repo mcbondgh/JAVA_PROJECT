@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loadPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="1200.0" prefHeight="672.0" prefWidth="1278.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cass.myapp.controllers.StudentDashboard">
+   <children>
+      <Pane layoutX="-10.0" layoutY="-6.0" prefHeight="91.0" prefWidth="1299.0" style="-fx-background-color: #0053DB;">
+         <children>
+            <ImageView fitHeight="131.0" fitWidth="150.0" layoutX="41.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="1076.0" layoutY="28.0" prefHeight="46.0" prefWidth="200.0" style="-fx-border-style: solid; -fx-border-radius: 50; -fx-border-color: #fff;">
+               <children>
+                  <Label fx:id="activeUsername" layoutX="61.0" layoutY="5.0" prefHeight="37.0" prefWidth="139.0" text="Name" textFill="#ffec00">
+                     <font>
+                        <Font name="Fira Sans Black" size="17.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="0.0" radius="0.0" width="0.0" />
+                     </effect>
+                  </Label>
+               </children>
+            </Pane>
+            <Circle fill="WHITE" layoutX="1099.0" layoutY="51.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+            <ImageView fitHeight="35.0" fitWidth="46.0" layoutX="1078.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cliparts/users-png.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="236.0" layoutY="-3.0" prefHeight="91.0" prefWidth="844.0" text="CLASS ATTENDANCE SHEET SYSTEM" textFill="WHITE">
+         <font>
+            <Font name="BebasNeueBold" size="75.0" />
+         </font>
+      </Label>
+      <VBox layoutX="-3.0" layoutY="73.0" prefHeight="589.0" prefWidth="218.0" style="-fx-background-color: #0053DB; -fx-border-radius: 20;" styleClass="navmenu" translateY="5.0">
+         <children>
+            <Button alignment="BASELINE_LEFT" blendMode="SRC_ATOP" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#dashboard" prefHeight="37.0" prefWidth="200.0" style="-fx-border-radius: 9;" styleClass="dashboard-label" text="DASHBOARD" textFill="#0e569f" textOverrun="CLIP" wrapText="true">
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Fira Sans SemiBold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="studentButton" alignment="BASELINE_LEFT" blendMode="SRC_ATOP" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#viewStudentRecord" prefHeight="37.0" prefWidth="200.0" style="-fx-border-radius: 9;" styleClass="dashboard-label" text="STUDENTS" textFill="#0e569f" textOverrun="CLIP" wrapText="true">
+               <font>
+                  <Font name="Fira Sans SemiBold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="BASELINE_LEFT" blendMode="SRC_ATOP" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#viewStaffRecord" prefHeight="37.0" prefWidth="200.0" style="-fx-border-radius: 9;" styleClass="dashboard-label" text="STAFF MEMBERS" textFill="#0e569f" textOverrun="CLIP" wrapText="true">
+               <font>
+                  <Font name="Fira Sans SemiBold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="BASELINE_LEFT" blendMode="SRC_ATOP" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#attendenceReportAction" prefHeight="37.0" prefWidth="200.0" style="-fx-border-radius: 9;" styleClass="dashboard-label" text="ATTENDANCE REPORT" textFill="#0e569f" textOverrun="CLIP" wrapText="true">
+               <font>
+                  <Font name="Fira Sans SemiBold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="BASELINE_LEFT" blendMode="SRC_ATOP" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#takeAttandance" prefHeight="37.0" prefWidth="200.0" style="-fx-border-radius: 9;" styleClass="dashboard-label" text="TAKE ATTENDANCE" textFill="#0e569f" textOverrun="CLIP" wrapText="true">
+               <font>
+                  <Font name="Fira Sans SemiBold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="updateButton" alignment="BASELINE_LEFT" blendMode="SRC_ATOP" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#updateRecordOnAction" prefHeight="37.0" prefWidth="200.0" style="-fx-border-radius: 9;" styleClass="dashboard-label" text="UPDATE RECORD" textFill="#0e569f" textOverrun="CLIP" wrapText="true">
+               <font>
+                  <Font name="Fira Sans SemiBold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <MenuButton alignment="BASELINE_LEFT" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="37.0" prefWidth="200.0" styleClass="dropdown" text="ADD" textAlignment="CENTER" textFill="#0e569f" wrapText="true">
+               <items>
+                  <MenuItem fx:id="addStuden" mnemonicParsing="false" onAction="#showStudentStage" text="Add student" />
+                  <MenuItem fx:id="addstaff" mnemonicParsing="false" onAction="#showStaffStage" text="Add Staff" />
+                  <MenuItem fx:id="addnewUser" mnemonicParsing="false" onAction="#showNewUserStage" text="Add New User" />
+                  <MenuItem fx:id="addSubject" mnemonicParsing="false" onAction="#showSubjectStage" text="Add Subject" />
+
+                           </items>
+               <font>
+                  <Font name="Fira Sans SemiBold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+            </MenuButton>
+            <Button alignment="BASELINE_LEFT" blendMode="SRC_ATOP" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#userLogs" prefHeight="37.0" prefWidth="200.0" style="-fx-border-radius: 9;" styleClass="dashboard-label" text="USER LOGS" textFill="#0e569f" textOverrun="CLIP" wrapText="true">
+               <font>
+                  <Font name="Fira Sans SemiBold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="signoutButton" mnemonicParsing="false" onAction="#signoutOnClick" prefHeight="37.0" prefWidth="200.0" style="-fx-background-color: red;" text="Signout" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="BebasNeueBold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" top="130.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </VBox>
+      <BorderPane fx:id="insertScene" layoutX="226.0" layoutY="94.0" prefHeight="563.0" prefWidth="1043.0" style="-fx-background-color: rgb(228, 227, 227); -fx-background-radius: 10; -fx-border-radius: ;">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.7368420958518982" green="0.7231968641281128" blue="0.7231968641281128" />
+               </color>
+            </DropShadow>
+         </effect>
+         <center>
+            <Label prefHeight="303.0" prefWidth="702.0" style="-fx-background-color: #fff; -fx-background-radius: 20; -fx-border-radius: 10;" text="&quot;...the desire to be the best is what keeps us working hard at our passion and goals...&quot;" textFill="#0973c9" wrapText="true" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="AGaramondPro-Italic" size="37.0" />
+               </font>
+               <effect>
+                  <DropShadow radius="10.9725" width="24.89">
+                     <color>
+                        <Color red="0.7719298005104065" green="0.7266623377799988" blue="0.7266623377799988" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <padding>
+                  <Insets bottom="10.0" left="50.0" right="10.0" top="10.0" />
+               </padding>
+            </Label>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="600.0" stylesheets="@../cass/myapp/cliparts/cass.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cass.myapp.controllers.AddStaff">
+   <children>
+      <SplitPane layoutX="328.0" layoutY="370.0" prefHeight="66.0" prefWidth="220.0" style="-fx-background-color: # F2F3F4; -fx-background-radius: 10;" />
+      <Pane layoutX="-6.0" prefHeight="101.0" prefWidth="607.0" styleClass="pane" stylesheets="@cass.css">
+         <children>
+            <Label id="staffLabel" layoutX="158.0" layoutY="18.0" prefHeight="66.0" prefWidth="381.0" styleClass="staffLabel" stylesheets="@cass.css" text="ADD NEW STAFF MEMBER" textFill="WHITE">
+               <font>
+                  <Font name="BebasNeueBold" size="48.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="81.0" fitWidth="111.0" layoutX="83.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cliparts/staff%20copy.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="89.0" layoutX="56.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../cass/myapp/cliparts/users-png.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <TextField fx:id="firstNameField" layoutX="54.0" layoutY="172.0" prefHeight="33.0" prefWidth="220.0" promptText="Queen">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="lastNameField" layoutX="325.0" layoutY="172.0" prefHeight="33.0" prefWidth="220.0" promptText="Lady">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="staffIdField" layoutX="55.0" layoutY="248.0" prefHeight="33.0" prefWidth="220.0" promptText="9933923A">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="numberField" layoutX="326.0" layoutY="248.0" prefHeight="33.0" prefWidth="220.0" promptText="0302316555">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="departmentField" layoutX="54.0" layoutY="322.0" prefHeight="33.0" prefWidth="220.0" promptText="Computer Science">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="subjectField" layoutX="325.0" layoutY="322.0" prefHeight="33.0" prefWidth="220.0" promptText="Java">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="titleField" layoutX="55.0" layoutY="398.0" prefHeight="33.0" prefWidth="220.0" promptText="MR/DR/SIR/PROF">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <RadioButton layoutX="335.0" layoutY="399.0" mnemonicParsing="false" text="Male">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="Gender" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="408.0" layoutY="400.0" mnemonicParsing="false" text="Female" toggleGroup="$Gender">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <Button fx:id="submitButton" layoutX="174.0" layoutY="508.0" mnemonicParsing="false" onAction="#submitOnClick" prefHeight="33.0" prefWidth="248.0" styleClass="submit" stylesheets="@cass.css" text="SUBMIT" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="BebasNeueBold" size="19.0" />
+         </font>
+      </Button>
+      <Label layoutX="340.0" layoutY="371.0" prefHeight="17.0" prefWidth="70.0" text="Gender" textFill="#800561">
+         <font>
+            <Font name="BebasNeueBold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="148.0" prefHeight="17.0" prefWidth="70.0" text="FIRST NAME" textFill="#800561">
+         <font>
+            <Font name="BebasNeueBold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="328.0" layoutY="148.0" prefHeight="17.0" prefWidth="70.0" text="LAST NAME" textFill="#800561">
+         <font>
+            <Font name="BebasNeueBold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="224.0" prefHeight="23.0" prefWidth="56.0" text="Staff id" textFill="#800561">
+         <font>
+            <Font name="BebasNeueBold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="phoneLabel" layoutX="332.0" layoutY="224.0" prefHeight="23.0" prefWidth="98.0" text="PHONE NUMBER" textFill="#800561">
+         <font>
+            <Font name="BebasNeueBold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="298.0" prefHeight="23.0" prefWidth="98.0" text="DEPARTMENT" textFill="#800561">
+         <font>
+            <Font name="BebasNeueBold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="332.0" layoutY="298.0" prefHeight="23.0" prefWidth="56.0" text="SUBJECT " textFill="#800561">
+         <font>
+            <Font name="BebasNeueBold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="371.0" prefHeight="23.0" prefWidth="38.0" text="TITLE" textFill="#800561">
+         <font>
+            <Font name="BebasNeueBold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

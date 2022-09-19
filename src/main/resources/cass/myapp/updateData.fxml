@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="studentPane" prefHeight="563.0" prefWidth="1043.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cass.myapp.controllers.UpdateRecords">
+   <children>
+      <TabPane layoutX="24.0" layoutY="88.0" prefHeight="467.0" prefWidth="999.0" rotateGraphic="true" style="-fx-background-color: WHITE;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab style="-fx-font-size: 14; -fx-padding: 5; -fx-text-fill: black; -font-family: arial; -fx-padding: 5 10 5 10; -fx-font-weight: bold; -fx-background-color: lightBlue;" text="UPDATE STUDENT RECORDS">
+            <content>
+              <AnchorPane prefHeight="503.0" prefWidth="998.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d8e2d721" height="433.0" stroke="#d9d2d2" strokeType="INSIDE" strokeWidth="3.0" style="-fx-background-color: thingray; -fx-border-color: gray; -fx-border-radius: 10;" width="999.0" />
+                        <TextField fx:id="studentSearchBox" layoutX="63.0" layoutY="14.0" prefHeight="35.0" prefWidth="565.0" promptText="Please perform search by STUDENT ID or LAST NAME only" style="-fx-border-color: rgb(4, 163, 60); -fx-border-radius: 10; -fx-background-radius: 10;">
+                           <font>
+                              <Font name="System Italic" size="15.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="studentSearchButton" layoutX="655.0" layoutY="13.0" mnemonicParsing="false" onAction="#searchStudentOnAction" prefHeight="35.0" prefWidth="179.0" style="-fx-background-color: rgba(3, 180, 65, 0.808); -fx-background-radius: 10;" text="SEARCH STUDENT" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="firstnameField" layoutX="115.0" layoutY="106.0" prefHeight="33.0" prefWidth="244.0" promptText="Firstname" style="-fx-background-color: thingray; -fx-border-color: gray; -fx-border-radius: 10;">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="lastnameField" layoutX="385.0" layoutY="104.0" prefHeight="33.0" prefWidth="244.0" promptText="Lastname" style="-fx-background-color: thingray; -fx-border-color: gray; -fx-border-radius: 10;">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="studentIdField" editable="false" layoutX="115.0" layoutY="177.0" prefHeight="33.0" prefWidth="244.0" promptText="Student Id" style="-fx-background-color: thinred; -fx-border-color: rgb(255, 82, 82); -fx-border-radius: 10;">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="emailField" layoutX="385.0" layoutY="177.0" prefHeight="33.0" prefWidth="244.0" promptText="Email" style="-fx-background-color: thingray; -fx-border-color: gray; -fx-border-radius: 10;">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="genderField" layoutX="115.0" layoutY="248.0" prefHeight="33.0" prefWidth="244.0" promptText="Gender" style="-fx-background-color: thingray; -fx-border-color: gray; -fx-border-radius: 10;">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="levelField" layoutX="385.0" layoutY="248.0" prefHeight="33.0" prefWidth="244.0" promptText="eg 100, 200" style="-fx-background-color: thingray; -fx-border-color: gray; -fx-border-radius: 10;">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="classField" layoutX="115.0" layoutY="319.0" prefHeight="33.0" prefWidth="244.0" promptText="eg A, B, C, D" style="-fx-background-color: thingray; -fx-border-color: gray; -fx-border-radius: 10;">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="statusField" editable="false" layoutX="385.0" layoutY="319.0" prefHeight="33.0" prefWidth="244.0" promptText="eg Student" style="-fx-background-color: thinred; -fx-border-color: rgb(255, 82, 82); -fx-border-radius: 10;">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="programmeField" layoutX="650.0" layoutY="106.0" prefHeight="33.0" prefWidth="244.0" promptText="eg HND Networking" style="-fx-background-color: thingray; -fx-border-color: gray; -fx-border-radius: 10;">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="departmentField" layoutX="650.0" layoutY="179.0" prefHeight="33.0" prefWidth="244.0" promptText="eg Computer Science" style="-fx-background-color: thingray; -fx-border-color: gray; -fx-border-radius: 10;">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </TextField>
+                        <Text layoutX="119.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Firstname" wrappingWidth="116.13673400878906">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="385.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lastname" wrappingWidth="116.13673400878906">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="117.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Id" wrappingWidth="116.13673400878906">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="386.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="116.13673400878906">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="116.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender" wrappingWidth="116.13673400878906">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="386.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level" wrappingWidth="116.13673400878906">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="117.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Class" wrappingWidth="116.13673400878906">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="385.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" wrappingWidth="116.13673400878906">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="653.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Programme" wrappingWidth="116.13673400878906">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="653.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Department" wrappingWidth="116.13673400878906">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="studentUpdateButton" layoutX="668.0" layoutY="240.0" mnemonicParsing="false" onAction="#updateStudentOnAction" prefHeight="36.0" prefWidth="209.0" style="-fx-background-color: rgb(2, 151, 54); -fx-border-radius: 10; -fx-background-radius: 10;" text="UPDATE RECORD" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="studentDeleteButton" layoutX="668.0" layoutY="294.0" mnemonicParsing="false" onAction="#deleteStudentOnAction" prefHeight="36.0" prefWidth="209.0" style="-fx-background-color: rgb(255,0,0); -fx-border-radius: 10; -fx-background-radius: 10;" text="DELETE RECORD" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab style="-fx-font-size: 14; -fx-padding: 5; -fx-text-fill: black; -font-family: arial; -fx-padding: 5 10 5 10; -fx-background-color: lightgreen; -fx-font-weight: bold;" text="UPDATE USER RECORDS">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="396.0" prefWidth="989.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff20" height="433.0" layoutY="-1.0" stroke="#d9d2d2" strokeType="INSIDE" strokeWidth="3.0" width="999.0" />
+                        <TextField fx:id="userSearchBox" layoutX="63.0" layoutY="14.0" prefHeight="35.0" prefWidth="565.0" promptText="Please perform search by USERNAME or ID only" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: rgb(4, 163, 60);">
+                           <font>
+                              <Font name="System Italic" size="15.0" />
+                           </font>
+                        </TextField>
+                        <Button layoutX="656.0" layoutY="13.0" mnemonicParsing="false" onAction="#searchUserOnAction" prefHeight="35.0" prefWidth="179.0" style="-fx-background-color: rgba(3, 180, 65, 0.808); -fx-border-radius: 10; -fx-background-radius: 10;" text="SEARCH USER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="usernameField" layoutX="181.0" layoutY="89.0" prefHeight="39.0" prefWidth="297.0" promptText="Username" style="-fx-border-color: gray; -fx-border-radius: 10; -fx-background-radius: 10;">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="userIdField" layoutX="182.0" layoutY="161.0" prefHeight="39.0" prefWidth="297.0" promptText="eg 10883230A" style="-fx-border-color: gray; -fx-border-radius: 10; -fx-background-radius: 10;">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="189.0" layoutY="64.0" prefHeight="25.0" prefWidth="99.0" text="Username" textFill="#5c5b5b">
+                           <font>
+                              <Font name="System Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="189.0" layoutY="137.0" prefHeight="25.0" prefWidth="99.0" text="User Id" textFill="#5c5b5b">
+                           <font>
+                              <Font name="System Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="189.0" layoutY="208.0" prefHeight="25.0" prefWidth="99.0" text="Password" textFill="#5c5b5b">
+                           <font>
+                              <Font name="System Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="189.0" layoutY="286.0" prefHeight="25.0" prefWidth="141.0" text="Confirm Password" textFill="#5c5b5b">
+                           <font>
+                              <Font name="System Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="passwordField" layoutX="181.0" layoutY="233.0" prefHeight="39.0" prefWidth="297.0" promptText="Password" style="-fx-border-color: gray; -fx-border-radius: 10; -fx-background-radius: 10;">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </PasswordField>
+                        <PasswordField fx:id="confirmPasswordField" layoutX="181.0" layoutY="310.0" prefHeight="39.0" prefWidth="297.0" promptText="Confirm Password" style="-fx-border-color: gray; -fx-border-radius: 10; -fx-background-radius: 10;">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </PasswordField>
+                        <TextField fx:id="userRoleField" layoutX="537.0" layoutY="89.0" prefHeight="39.0" prefWidth="297.0" promptText="User Role" style="-fx-border-color: gray; -fx-border-radius: 10; -fx-background-radius: 10;">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="userUpateButton" layoutX="581.0" layoutY="163.0" mnemonicParsing="false" onAction="#updateUserOnAction" prefHeight="36.0" prefWidth="212.0" style="-fx-background-color: rgb(2, 151, 54); -fx-border-radius: 10; -fx-background-radius: 10;" text="UPDATE RECORD" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="userDeleteButton" layoutX="581.0" layoutY="220.0" mnemonicParsing="false" onAction="#deleteUserOnAction" prefHeight="36.0" prefWidth="212.0" style="-fx-background-color: rgb(255, 0, 0); -fx-border-radius: 10; -fx-background-radius: 10;" text="DELETE RECORD" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab style="-fx-font-size: 14; -fx-padding: 5; -fx-text-fill: orange; -fx-background-color: rgba(255, 159, 16, 0.712); -fx-padding: 5 10 5 10; -fx-font-family: arial; -fx-font-weight: bold;" text="UPDATE SUBJECT">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="396.0" prefWidth="989.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff20" height="433.0" layoutY="-1.0" stroke="#d9d2d2" strokeType="INSIDE" strokeWidth="3.0" width="999.0" />
+                        <TextField fx:id="subjectSearchBox" layoutX="44.0" layoutY="44.0" prefHeight="35.0" prefWidth="226.0" promptText="Search Subject" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: rgb(4, 163, 60);">
+                           <font>
+                              <Font name="System Italic" size="15.0" />
+                           </font>
+                        </TextField>
+                        <Button layoutX="287.0" layoutY="44.0" mnemonicParsing="false" onAction="#subjectSearch" prefHeight="36.0" prefWidth="91.0" style="-fx-background-color: rgba(3, 180, 65, 0.808); -fx-border-radius: 10; -fx-background-radius: 10;" text="SEARCH" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="subjectNameField" layoutX="44.0" layoutY="127.0" prefHeight="42.0" prefWidth="303.0" promptText="Subject Name" style="-fx-border-color: gray; -fx-border-radius: 10; -fx-background-radius: 10;">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="subjectCodeField" layoutX="46.0" layoutY="215.0" prefHeight="42.0" prefWidth="85.0" promptText="CS 112" style="-fx-border-color: gray; -fx-border-radius: 10; -fx-background-radius: 10;">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button layoutX="67.0" layoutY="294.0" mnemonicParsing="false" onAction="#updateSubject" prefHeight="36.0" prefWidth="123.0" style="-fx-background-color: rgb(2, 151, 54); -fx-border-radius: 10; -fx-background-radius: 10;" text="UPDATE " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="200.0" layoutY="294.0" mnemonicParsing="false" onAction="#deleteSubject" prefHeight="36.0" prefWidth="114.0" style="-fx-background-color: rgb(255, 0, 0); -fx-border-radius: 10; -fx-background-radius: 10;" text="DELETE " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <TableView fx:id="subjectsTable" layoutX="428.0" layoutY="25.0" onMouseMoved="#liveUpdate" prefHeight="385.0" prefWidth="558.0" style="-fx-font-size: 16; -fx-alignment: center; -fx-border-color: lightgray; -fx-border-width: 2; -fx-font-weight: bold;">
+                          <columns>
+                            <TableColumn fx:id="idColumn" maxWidth="300.0" prefWidth="39.333343505859375" resizable="false" style="-fx-alignment: center; -fx-background-color: #FFD4A7;" text="ID" />
+                            <TableColumn fx:id="nameColumn" maxWidth="300.0" minWidth="9.3333740234375" prefWidth="251.333251953125" style="-fx-alignment: center; -fx-text-fill: brown;" text="COURSE NAME" />
+                              <TableColumn fx:id="codeColumn" maxWidth="300.0" minWidth="9.3333740234375" prefWidth="71.3333740234375" style="-fx-alignment: center; -fx-background-color: #FFD4A7;" text="CODE" />
+                              <TableColumn fx:id="semColumn" maxWidth="300.0" minWidth="0.0" prefWidth="65.33331298828125" style="-fx-alignment: center; -fx-text-fill: brown;" text="SEM" />
+                              <TableColumn fx:id="durationColumn" maxWidth="137.33333333333337" minWidth="0.0" prefWidth="94.66668701171875" style="-fx-alignment: center; -fx-background-color: #FFD4A7;" text="DURATION" />
+                          </columns>
+                           <effect>
+                              <DropShadow blurType="ONE_PASS_BOX" height="46.3" radius="19.2475" width="32.69">
+                                 <color>
+                                    <Color red="0.6200000047683716" green="0.6200000047683716" blue="0.6200000047683716" opacity="0.5812182426452637" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </TableView>
+                        <Label layoutX="46.0" layoutY="100.0" prefHeight="17.0" prefWidth="129.0" text="Subject Name" textFill="#888585">
+                           <font>
+                              <Font name="Arial Bold Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="50.0" layoutY="189.0" prefHeight="20.0" prefWidth="54.0" text="Code" textFill="#888585">
+                           <font>
+                              <Font name="Arial Bold Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="160.0" layoutY="189.0" prefHeight="20.0" prefWidth="85.0" text="Semester" textFill="#888585">
+                           <font>
+                              <Font name="Arial Bold Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="271.0" layoutY="189.0" prefHeight="20.0" prefWidth="80.0" text="Duration" textFill="#888585">
+                           <font>
+                              <Font name="Arial Bold Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="subjectSemField" layoutX="145.0" layoutY="215.0" prefHeight="42.0" prefWidth="103.0" promptText="CS 112" style="-fx-border-color: gray; -fx-border-radius: 10; -fx-background-radius: 10;">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="subjectDurationField" layoutX="258.0" layoutY="215.0" prefHeight="42.0" prefWidth="92.0" promptText="CS 112" style="-fx-border-color: gray; -fx-border-radius: 10; -fx-background-radius: 10;">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TabPane>
+      <Pane layoutX="-1.0" prefHeight="87.0" prefWidth="1049.0" style="-fx-background-color: rgb(2, 151, 136); -fx-border-radius: 10; -fx-background-radius: 10;">
+         <children>
+            <Label layoutX="269.0" layoutY="13.0" prefHeight="62.0" prefWidth="661.0" text="UPDATE USER/STUDENT RECORES" textFill="WHITE">
+               <font>
+                  <Font name="BebasNeueBold" size="50.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

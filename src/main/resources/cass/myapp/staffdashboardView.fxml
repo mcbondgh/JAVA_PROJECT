@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="dashboardPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#updateDashboard" prefHeight="563.0" prefWidth="1043.0" style="-fx-border-radius: 10; -fx-background-color: #fff; -fx-border-style: curve; -fx-background-radius: 10;" stylesheets="@cliparts/cass.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cass.myapp.controllers.dashboardView">
+   <children>
+      <Circle layoutX="824.0" layoutY="333.0" radius="86.0" stroke="WHITE" strokeType="INSIDE" style="-fx-fill: #ffc014;">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <effect>
+            <DropShadow radius="4.75" width="0.0">
+               <color>
+                  <Color red="0.3684210479259491" green="0.36500975489616394" blue="0.36500975489616394" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Circle>
+      <Circle layoutX="244.0" layoutY="290.0" radius="124.0" stroke="WHITE" strokeType="INSIDE" style="-fx-fill: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #3662f2 0.0%, #5fccff 100.0%);">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <effect>
+            <DropShadow radius="4.75" width="0.0">
+               <color>
+                  <Color red="0.3684210479259491" green="0.36500975489616394" blue="0.36500975489616394" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Circle>
+      <Pane layoutY="-4.0" prefHeight="100.0" prefWidth="1043.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: rgb(185, 45, 110);" styleClass="pane" stylesheets="@cass.css">
+         <cursor>
+            <Cursor fx:constant="E_RESIZE" />
+         </cursor>
+         <children>
+            <Label id="staffLabel" layoutX="393.0" layoutY="5.0" prefHeight="94.0" prefWidth="326.0" styleClass="staffLabel" stylesheets="@cass.css" text="dashboard" textFill="WHITE">
+               <font>
+                  <Font name="BebasNeueBold" size="68.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label fx:id="studentRowCount" alignment="CENTER" layoutX="145.0" layoutY="217.0" prefHeight="152.0" prefWidth="191.0" text="0" textAlignment="CENTER" textFill="WHITE" textOverrun="LEADING_WORD_ELLIPSIS">
+         <font>
+            <Font name="BebasNeueRegular" size="120.0" />
+         </font>
+         <effect>
+            <DropShadow height="9.32" radius="2.7" width="3.48" />
+         </effect>
+      </Label>
+      <Label alignment="CENTER" layoutX="143.0" layoutY="417.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: purple; -fx-border-radius: 20; -fx-background-radius: 10;" text="TOTAL STUDENTS" textFill="WHITE">
+         <font>
+            <Font name="Gadugi Bold" size="19.0" />
+         </font>
+      </Label>
+      <Circle layoutX="559.0" layoutY="308.0" radius="109.0" stroke="WHITE" strokeType="INSIDE" style="-fx-fill: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #de2cc07f 0.0%, #2c4fdd 100.0%);">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <effect>
+            <DropShadow radius="4.75" width="0.0">
+               <color>
+                  <Color red="0.3684210479259491" green="0.36500975489616394" blue="0.36500975489616394" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Circle>
+      <Label fx:id="lecturerRowCount" alignment="CENTER" layoutX="471.0" layoutY="236.0" prefHeight="139.0" prefWidth="174.0" text="0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="BebasNeueRegular" size="100.0" />
+         </font>
+         <effect>
+            <DropShadow height="5.43" radius="1.24" width="1.53" />
+         </effect>
+      </Label>
+      <Label alignment="CENTER" layoutX="472.0" layoutY="420.0" prefHeight="30.0" prefWidth="172.0" style="-fx-background-color: purple; -fx-background-radius: 10;" text="TOTAL STAFF" textFill="WHITE">
+         <font>
+            <Font name="Gadugi Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="subjectRowCount" alignment="CENTER" layoutX="757.0" layoutY="277.0" prefHeight="111.0" prefWidth="133.0" text="0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="BebasNeueRegular" size="83.0" />
+         </font>
+         <effect>
+            <DropShadow height="9.32" radius="3.255" spread="0.06" width="5.7" />
+         </effect>
+      </Label>
+      <Label alignment="CENTER" layoutX="735.0" layoutY="423.0" prefHeight="28.0" prefWidth="185.0" style="-fx-background-color: purple; -fx-background-radius: 10;" text="TOTAL SUBJECTS" textFill="WHITE">
+         <font>
+            <Font name="Gadugi Bold" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
