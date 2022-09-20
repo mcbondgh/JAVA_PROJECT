@@ -32,10 +32,8 @@ public class Dashboard {
         statement.execute(insertQuery);
     }
 
-    /*******************************************************************************************************************
-                                insert statement to add register a new staff member to the system
-     *******************************************************************************************************************/
-        /***********************************************************************************************************
+  
+    /***********************************************************************************************************
                                 insert statement to register a new student into the system
     ********************************************************************************************************************/
     public static void RegisterStudent(String firstname, String lastname, String studentId, String email, String gender, int level, String stuClass,
